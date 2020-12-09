@@ -32,13 +32,7 @@ export default class App extends Component {
   }
 
   logOut = () => {
-    localStorage.removeItem('TOKEN');
-    localStorage.removeItem('USERNAME');
-
-    this.setState({
-      username: '',
-      token: ''
-    })
+    this.changeTokenAndUsername('', '')
   }
 
   render() {
@@ -46,11 +40,7 @@ export default class App extends Component {
       <div>
         <Router>
 
-          {
-            this.state.token
-              ? <Header />
-              : <>
-              </>}
+          { this.state.token && <Header /> }
 
           <Switch>
             <Route exact path='/login' render={(routerProps) =>
@@ -107,7 +97,7 @@ export default class App extends Component {
             <PrivateRoute
               token={this.state.token}
               exact
-              path='/aboutus'
+              path='/about-us'
               render={(routerProps) =>
                 <AboutUs
                   {...routerProps}

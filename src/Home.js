@@ -18,6 +18,7 @@ export default class Home extends Component {
     componentDidMount = async () => {
         this.fetchName();
     }
+    
     buttonClick = async (e) => {
         e.preventDefault();
 

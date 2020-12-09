@@ -1,5 +1,6 @@
 import request from 'superagent';
 
+// nice work! most groups didn't store the URL in a const, and never made a file for fetches--this looks great!
 const herokuBackend = 'https://rocky-dawn-10139.herokuapp.com/'
 const localBackend = 'http://localhost:4000/';
 

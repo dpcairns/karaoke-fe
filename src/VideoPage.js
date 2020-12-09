@@ -47,6 +47,7 @@ export default class VideoPage extends Component {
                                 
                                     <div class="resp-container">
                                         <iframe className="glow" title="youTubeVideo" id="player" type="text/html" width="200%" height="200%"
+                                        // so simple yet so effective!
                                         src={`https://www.youtube.com/embed/${this.state.videos.videoId}?enablejsapi=1&origin=http://example.com`}
                                         frameBorder="0"></iframe>
                                     </div>
